@@ -1,18 +1,28 @@
 <?php
 
 class Product {
+    private $id;
     private $image;
     private $title;
     private $price;
     private $category;
-    private $target;
+   
 
-    public function __construct($image, $title, $price, $category, $target) {
+    public function __construct($image, $title, $price, $category) {
         $this->setImage($image);
         $this->setTitle($title);
         $this->setPrice($price);
         $this->setCategory($category);
-        $this->setTarget($target);
+    
+    }
+
+
+        public function setId($id){
+        return $this -> id = $id;
+    }
+
+    public function getId() {
+        return $this->id;
     }
 
     public function setImage($image)
@@ -47,18 +57,9 @@ class Product {
         return $this->category;
     }
 
-    public function setTarget($target){
-        return $this -> target = $target;
-    }
 
-    public function getTarget() {
-        return $this->target;
-    }
 
 
 }
 
 
-
-$product = new Product ("dio", "dio", "dio", "dio","dio");
-var_dump ($product);
